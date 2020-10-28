@@ -3,4 +3,54 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container{
+    width: 100%;
+}
+.fl{
+    float: right;
+}
+/* .sidebar{
+    width: 15%;
+    position: fixed;
+    height: 100%;
+    background-color: brown;
+} */
+.home{
+    width: 100%;
+    background-image: url(../Images/work.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    background-color: cadetblue;
+    z-index: 2;
+
+}
+.home1{
+    width: 85%;
+    height: 300px;
+    background-color: chocolate;
+
+}
+.home2{
+    width: 85%;
+    height: 300px;
+    background-color: crimson;
+
+}
+.home3{
+    width: 85%;
+    height: 300px;
+    background-color: darkgreen;
+
+}
+.home4{
+    width: 85%;
+    height: 300px;
+    background-color: deepskyblue;
+
+}
+.clr{
+    clear: both;
+}
 
