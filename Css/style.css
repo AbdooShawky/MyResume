@@ -251,3 +251,35 @@ ul li p:hover {
 
 }
 /* End Experience */
+
+/* Start Project */
+.circle{
+
+    width: 70px;
+    height: 70px;
+    line-height: 60px;
+    font-size: 30px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.github a{
+    font-size: 22px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 5px;
+    transition: 0.6s;
+}
+.github a:hover{
+     
+    color: #ffa500  ;
+}
+
+/* End Project */
