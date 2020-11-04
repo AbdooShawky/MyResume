@@ -24,8 +24,11 @@ header{
 
 }
 .header-overlay{
-    background-color: rgba(0, 0, 0, 0.89);
+    background-color: rgba(0, 0, 0, 0.781);
 
+}
+nav{
+    transition: all 0.5s;
 }
 nav ul li{
     padding: 7px;
@@ -281,5 +284,40 @@ ul li p:hover {
      
     color: #ffa500  ;
 }
+.project {
+    background-image: url(../Images/work.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.project{
+    margin: 50px 0px;
+    
+}
+.project .header-overlay{
+    padding: 25px 0px;
+}
 
 /* End Project */
+#imgdesc{
+    background-color: transparent;
+    transition: all 0.6s;
+    cursor: pointer;
+
+}
+.search-icon , .headinig {
+    transition: all 0.5s;
+}
+.cert-item{
+    background-color: #202026;
+    margin-bottom: 30px;
+    
+    border-radius: 4px;
+}
+.cert-item h6{
+    bottom: 0;
+    
+}
+.prog{
+    padding: 15px 7px;
+}
