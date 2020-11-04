@@ -224,7 +224,8 @@ ul li p:hover {
     background-color: #202026;
     margin-bottom: 30px;
     padding: 26px 15px 26px 30px;
-    border-radius: 4px;
+    border-radius: 15px;
+    box-shadow: -1rem 0 3rem #000;
 }
 .edu-item h4{
     font-size: 20px;
@@ -299,10 +300,16 @@ ul li p:hover {
 }
 
 /* End Project */
+
+/* Start Certificate */
+
 #imgdesc{
     background-color: transparent;
     transition: all 0.6s;
     cursor: pointer;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+   
 
 }
 .search-icon , .headinig {
@@ -311,8 +318,12 @@ ul li p:hover {
 .cert-item{
     background-color: #202026;
     margin-bottom: 30px;
-    
-    border-radius: 4px;
+    box-shadow: -1rem 0 3rem #000;
+    border-radius: 15px;
+}
+.cert-item img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 .cert-item h6{
     bottom: 0;
@@ -321,3 +332,56 @@ ul li p:hover {
 .prog{
     padding: 15px 7px;
 }
+/* Start Certificate */
+/* Start Image view */
+
+.img-view{
+    background-color: rgba(0, 0, 0, 0.781);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99999;
+    transition: all 0.5s;
+    
+    
+    
+}
+.img-view .block{
+    background-color: rgb(27, 27, 27);;
+    border-radius: 15px;
+    color:  rgb(226, 225, 225);
+    box-shadow: -1rem 0 3rem #000;
+    transition: all 0.5s;
+}
+#view-card{
+    transition: all 0.5s;
+    
+}
+.times{
+    font-size: 30px;
+    line-height: 30px;
+    color:  rgb(202, 201, 201);
+    cursor: pointer;
+    font-weight: 900;
+    padding: 10px 15px;
+}
+.times:hover{
+     color: rgb(226, 225, 225);
+}
+.block{
+    transition: all 0.4s;
+    
+}
+.img-v{
+    transition: transform 0.4;
+    border-radius: 15px;
+}
+/* .block:hover {
+    transform: scale(1.2,1.2);
+    
+} */
+
+
+/* End Image view */
