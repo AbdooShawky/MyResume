@@ -575,12 +575,13 @@ left: ;
     header{
         background-attachment: inherit;
     }
-    .experience{
-        background-attachment: inherit;
+    .contact-addres{
+        padding-left: 15px ;
     }
-    .project{
-        background-attachment: inherit;
+    .contact-icon{
+        padding: 25px;
     }
+    
     
 }
 
@@ -589,15 +590,6 @@ left: ;
     
     .img-view .container{
         width: 90% !important;
-    }
-    header{
-        background-attachment: inherit;
-    }
-    .experience{
-        background-attachment: inherit;
-    }
-    .project{
-        background-attachment: inherit;
     }
 }
 
