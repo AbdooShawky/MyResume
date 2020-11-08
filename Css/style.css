@@ -572,6 +572,9 @@ left: ;
 
     }
 
+    header{
+        background-attachment: inherit;
+    }
     
     
 }
