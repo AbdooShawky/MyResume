@@ -439,6 +439,7 @@ ul li p:hover {
     position: fixed;
     bottom: 25px;
     right: 25px;
+    box-shadow: -1rem 0 3rem #000;
 }
 .setting{
     padding: 10px;
