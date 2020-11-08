@@ -575,7 +575,12 @@ left: ;
     header{
         background-attachment: inherit;
     }
-    
+    .experience{
+        background-attachment: inherit;
+    }
+    .project{
+        background-attachment: inherit;
+    }
     
 }
 
@@ -584,6 +589,15 @@ left: ;
     
     .img-view .container{
         width: 90% !important;
+    }
+    header{
+        background-attachment: inherit;
+    }
+    .experience{
+        background-attachment: inherit;
+    }
+    .project{
+        background-attachment: inherit;
     }
 }
 
