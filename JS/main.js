@@ -14,8 +14,75 @@ $(function () {
     // });
    
 
-    var color ="rgb(255, 165, 0)";
     
+
+    var color ;
+    if(localStorage.getItem("color") == null)
+    {
+        color ="rgb(255, 165, 0)";
+    }
+    else{
+        color =  localStorage.getItem("color");
+        // apply color on all elements
+       $('.navbar-brand').css('border-color',color);
+      
+       $('.shape').css('background-color',color);
+       $('.img-border img').css('border-color',color);
+       $('.tags ul li span').css('border-color',color);
+       $('.about .cv-link').css('border-color',color);
+       $('.edu-year').css('color',color);
+       $('.contact-icon').css('border-color',color);
+       $('.floating-buttom a').css('background-color',color);
+       $('.navbar-brand').css('border-color',color);
+       $('.navbar-brand').css('border-color',color);
+       $('.navbar-brand').css('border-color',color);
+       $('.navbar-dark .navbar-nav .nav-link').hover(function () {
+        // over
+        $(this).css('color',color);
+    }, function () {
+        // out
+        $(this).css('color','rgb(226, 225, 225)')
+    }
+);
+$('ul li p').hover(function () {
+        // over
+        $(this).css('color',color);
+            
+    }, function () {
+        // out
+        $(this).css('color','rgb(226, 225, 225)')
+    }
+);
+$('.social li a').hover(function () {
+        // over
+        $(this).css('color',color);
+
+    }, function () {
+        // out
+        $(this).css('color','rgb(226, 225, 225)')
+    }
+);
+$('.about .cv-link').hover(function () {
+        // over
+        $(this).css('color',color);
+
+    }, function () {
+        // out
+        $(this).css('color','rgb(226, 225, 225)')
+    }
+);
+$('.github a').hover(function () {
+        // over
+        $(this).css('color',color);
+
+    }, function () {
+        // out
+        $(this).css('color','rgb(226, 225, 225)')
+    }
+);
+
+    }
+   
     
 
     $(".sidebar span").click(function(){
@@ -26,6 +93,7 @@ $(function () {
       
        color = $("."+str[1]).css('background-color');
 
+       localStorage.setItem("color",color);
        // apply color on all elements
        $('.navbar-brand').css('border-color',color);
       
