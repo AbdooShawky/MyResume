@@ -9,6 +9,9 @@ h1,h2,h3,h4,h5,h6{
     font-weight: bold;
     color: rgb(226, 225, 225);
 }
+.w-60{
+    /* width: 70%; */
+}
 a{
     text-decoration: none;
     color: rgb(226, 225, 225);
@@ -319,7 +322,19 @@ ul li p:hover {
 }
 .search-icon , .headinig {
     transition: all 0.5s;
+    opacity: 0;
+
 }
+.search-icon {
+    transform: translateX(-100px);
+}
+.headinig{
+    transform: translateX(100px);
+}
+
+
+
+
 .cert-item{
     background-color: #202026;
     margin-bottom: 30px;
@@ -330,10 +345,7 @@ ul li p:hover {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
-.cert-item h6{
-    bottom: 0;
-    
-}
+
 .prog{
     padding: 15px 7px;
 }
@@ -431,8 +443,8 @@ ul li p:hover {
 /* End Image view */
 
 .floating-buttom a{
-    padding:15px;
-    border-radius: 100%;
+    padding:5px 7px;
+    border-radius: 4px;
     background-color:  #ffa500;
     font-size: 20px;
     color: white;
@@ -440,6 +452,11 @@ ul li p:hover {
     bottom: 25px;
     right: 25px;
     box-shadow: -1rem 0 3rem #000;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+.floating-buttom a:hover{
+    opacity: 1;
 }
 .setting{
     padding: 10px;

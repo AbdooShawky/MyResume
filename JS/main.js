@@ -1,21 +1,6 @@
 $(function () {
 
-    // download my cv
-    // $('#link').click(function(e) {
-    //     e.preventDefault();  //stop the browser from following
-    //     window.location.href = 'PDF/Abdelrahman Shawky CV.pdf';
-    // });
-
-    // $('#times').click(function () {
-
-    //     $('#view-card').animate({
-    //         height: '100%' ,
-    //     }, 500);
-    // });
    
-
-    
-
     var color ;
     if(localStorage.getItem("color") == null)
     {
@@ -157,8 +142,7 @@ $('.github a').hover(function () {
     
    
 
-    //jquery cookies
-        //create cookie session
+   
        
         
     $('#view').hide();
@@ -172,10 +156,15 @@ $('.github a').hover(function () {
         
         $('#preview').attr('src',src);
         // $('#view').show();
-        $('#view').fadeIn(500, function () {
-            $('#view-card').show();
-            $('.block').css('transform', 'translateY(70px)');
-            $('body').css('overflow', 'hidden');
+        $('#view').show(0, function () {
+            
+            $('#view-card').show(0, function(){
+                $('.block').css('transform', 'translateY(70px)');
+                $('body').css('overflow', 'hidden');
+
+            });
+            
+           
         });
        
         
@@ -185,10 +174,10 @@ $('.github a').hover(function () {
     $('#times').click(function(){
 
         
-      
-        $('#view').fadeOut(700, function () {
+        $('.block').css('transform', 'translateY(-70px)');
+        $('#view').hide(0, function () {
             $('body').css('overflow', 'visible');
-            $('.block').css('transform', 'translateY(-70px)');
+           
         });
       
         
@@ -230,7 +219,7 @@ $('.github a').hover(function () {
         if ($(window).scrollTop() > 80) {
 
             $('#floating').show(500);
-            $("#nav").addClass('fixed-top').removeClass('bg-transparent'); //.css('background-color','#202026');
+            $("#nav").removeClass('bg-transparent'); //.css('background-color','#202026');
             document.getElementById("nav").style.backgroundColor = "#202026";
             document.getElementById("nav").style.padding = "3px";
             document.getElementById("#navs").style.padding = " 7px 10px ";
@@ -238,7 +227,7 @@ $('.github a').hover(function () {
         }
         else {
             $('#floating').hide(500);
-            $("#nav").removeClass('fixed-top').addClass('bg-transparent');
+            $("#nav").addClass('bg-transparent');
             document.getElementById("#navs").style.padding = " 10px 15px ";
             document.getElementById("#navs").style.padding = "10px";
 
@@ -246,30 +235,36 @@ $('.github a').hover(function () {
         
     });
 
-    $("#imgdesc , .heading , .search-icon").hide();
-
-    // $('.block').hover(function(){
-
-    //     $('.block').css('transform', 'scale(1.2,1.1)');
-
-    // },function(){
-
-
-    //     $('.block').css('transform', 'scale(1,1)');
-
-    // });
+    //$("#imgdesc , .heading , .search-icon").hide();
     $('.imgdesc').hover(function () {
 
+      
+        //  $(this).css('background-color', "#09c");
         // over
-        $(this).css('background-color', color);
-        $(this).css('opacity', 0.6);
-        $(this).find('.search-icon , .heading').fadeIn(200);
+        $(this).animate({
+            opacity: 0.6,
+            
+        },10,function () { 
+            
+            $(this).css('background-color', color);
+            $(this).find(".headinig , .search-icon ").css('opacity', 1);
+            $(this).find('.headinig , .search-icon').css("transform","translateX(0px)");
+         });
+       
 
     }, function () {
         // out
-        $(this).find('  .search-icon , .heading').fadeOut(100);
-        $(this).css('background-color', "transparent");
-        $(this).css('opacity', 0);
+        $(this).animate({
+            opacity: 0.6,
+            
+        },10,function () { 
+            
+            $(this).css('background-color', "transparent");
+            $(this).find(".headinig , .search-icon ").css('opacity', 0);
+            $(this).find('.headinig').css("transform","translateX(100px)");
+            $(this).find('.search-icon').css("transform","translateX(-100px)");
+         });
+       
 
     }
 
