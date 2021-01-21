@@ -438,15 +438,21 @@ ul li p:hover {
 /* End Image view */
 
 .floating-buttom a{
-    padding:15px;
-    border-radius: 100%;
+    padding:5px 7px;
+    border-radius: 4px;
     background-color:  #ffa500;
     font-size: 20px;
     color: white;
     position: fixed;
     bottom: 25px;
     right: 25px;
+    opacity: 0.6;
     box-shadow: -1rem 0 3rem #000;
+    transition: opacity 0.2s;
+
+}
+.floating-buttom a:hover{
+    opacity: 1;
 }
 .setting{
     padding: 10px;
