@@ -221,15 +221,13 @@ $('.github a').hover(function () {
             $('#floating').show(500);
             $("#nav").removeClass('bg-transparent'); //.css('background-color','#202026');
             document.getElementById("nav").style.backgroundColor = "#202026";
-            document.getElementById("nav").style.padding = "3px";
-            document.getElementById("#navs").style.padding = " 7px 10px ";
+            
 
         }
         else {
             $('#floating').hide(500);
             $("#nav").addClass('bg-transparent');
-            document.getElementById("#navs").style.padding = " 10px 15px ";
-            document.getElementById("#navs").style.padding = "10px";
+            
 
         }
         
@@ -247,8 +245,8 @@ $('.github a').hover(function () {
         },10,function () { 
             
             $(this).css('background-color', color);
-            $(this).find(".headinig , .search-icon ").css('opacity', 1);
-            $(this).find('.headinig , .search-icon').css("transform","translateX(0px)");
+            $(this).find(".heading , .search-icon ").css('opacity', 1);
+            $(this).find('.heading , .search-icon').css("transform","translateX(0px)");
          });
        
 
@@ -260,8 +258,8 @@ $('.github a').hover(function () {
         },10,function () { 
             
             $(this).css('background-color', "transparent");
-            $(this).find(".headinig , .search-icon ").css('opacity', 0);
-            $(this).find('.headinig').css("transform","translateX(100px)");
+            $(this).find(".heading , .search-icon ").css('opacity', 0);
+            $(this).find('.heading').css("transform","translateX(100px)");
             $(this).find('.search-icon').css("transform","translateX(-100px)");
          });
        
