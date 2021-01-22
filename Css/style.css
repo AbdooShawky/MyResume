@@ -454,30 +454,36 @@ ul li p:hover {
 .floating-buttom a:hover{
     opacity: 1;
 }
-.setting{
-    padding: 10px;
-    font-size: 24px;
-    line-height: 20px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    background-color: rgb(228, 228, 228);
-    color: black;
-    position: fixed;
+.sidebar-container{
     left: 0px;
     top: 150px;
-
-    transition: all 0.6s;
+    
+}
+.setting{
+   
+    font-size: 24px;
+    line-height: 20px;
+    
+    color: black;
+    
     cursor: pointer;
 }
+.setting span{
+    display: inline-block;
+    background-color: rgb(228, 228, 228);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-left: 2px;
+
+}
 .sidebar{
-    position: fixed;
-    left: -199px;
-    top: 150px;
-    width: 199px;
+    
+
+    
     background-color: rgb(228, 228, 228);
     color: rgb(27, 27, 27);
     padding: 5px;
-    transition: all 0.6s;
+   
 }
 
 .sidebar-title{

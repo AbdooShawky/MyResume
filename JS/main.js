@@ -1,268 +1,267 @@
 $(function () {
 
-   
-    var color ;
-    if(localStorage.getItem("color") == null)
-    {
-        color ="rgb(255, 165, 0)";
+
+    // get color from local storage 
+    var color;
+    if (localStorage.getItem("color") == null) {
+        // if this is the firist time (local storage does not exist)
+        color = "rgb(255, 165, 0)"; // default color 
     }
-    else{
-        color =  localStorage.getItem("color");
+    else {
+
+        color = localStorage.getItem("color");
         // apply color on all elements
-       $('.navbar-brand').css('border-color',color);
-      
-       $('.shape').css('background-color',color);
-       $('.img-border img').css('border-color',color);
-       $('.tags ul li span').css('border-color',color);
-       $('.about .cv-link').css('border-color',color);
-       $('.edu-year').css('color',color);
-       $('.contact-icon').css('border-color',color);
-       $('.floating-buttom a').css('background-color',color);
-       $('.navbar-brand').css('border-color',color);
-       $('.navbar-brand').css('border-color',color);
-       $('.navbar-brand').css('border-color',color);
-       $('.navbar-dark .navbar-nav .nav-link').hover(function () {
-        // over
-        $(this).css('color',color);
-    }, function () {
-        // out
-        $(this).css('color','rgb(226, 225, 225)')
+        $('.navbar-brand').css('border-color', color);
+
+        $('.shape').css('background-color', color);
+        $('.img-border img').css('border-color', color);
+        $('.tags ul li span').css('border-color', color);
+        $('.about .cv-link').css('border-color', color);
+        $('.edu-year').css('color', color);
+        $('.contact-icon').css('border-color', color);
+        $('.floating-buttom a').css('background-color', color);
+        $('.navbar-brand').css('border-color', color);
+        $('.navbar-brand').css('border-color', color);
+        $('.navbar-brand').css('border-color', color);
+        $('.navbar-dark .navbar-nav .nav-link').hover(function () {
+            // over
+            $(this).css('color', color);
+        }, function () {
+            // out
+            $(this).css('color', 'rgb(226, 225, 225)')
+        }
+        );
+        $('ul li p').hover(function () {
+            // over
+            $(this).css('color', color);
+
+        }, function () {
+            // out
+            $(this).css('color', 'rgb(226, 225, 225)')
+        }
+        );
+        $('.social li a').hover(function () {
+            // over
+            $(this).css('color', color);
+
+        }, function () {
+            // out
+            $(this).css('color', 'rgb(226, 225, 225)')
+        }
+        );
+        $('.about .cv-link').hover(function () {
+            // over
+            $(this).css('color', color);
+
+        }, function () {
+            // out
+            $(this).css('color', 'rgb(226, 225, 225)')
+        }
+        );
+        $('.github a').hover(function () {
+            // over
+            $(this).css('color', color);
+
+        }, function () {
+            // out
+            $(this).css('color', 'rgb(226, 225, 225)')
+        }
+        );
+
     }
-);
-$('ul li p').hover(function () {
-        // over
-        $(this).css('color',color);
-            
-    }, function () {
-        // out
-        $(this).css('color','rgb(226, 225, 225)')
-    }
-);
-$('.social li a').hover(function () {
-        // over
-        $(this).css('color',color);
-
-    }, function () {
-        // out
-        $(this).css('color','rgb(226, 225, 225)')
-    }
-);
-$('.about .cv-link').hover(function () {
-        // over
-        $(this).css('color',color);
-
-    }, function () {
-        // out
-        $(this).css('color','rgb(226, 225, 225)')
-    }
-);
-$('.github a').hover(function () {
-        // over
-        $(this).css('color',color);
-
-    }, function () {
-        // out
-        $(this).css('color','rgb(226, 225, 225)')
-    }
-);
-
-    }
-   
-    
-
-    $(".sidebar span").click(function(){
 
 
-       var bgColor = $(this).attr('class');
-       var str = bgColor.split(" ");
-      
-       color = $("."+str[1]).css('background-color');
 
-       localStorage.setItem("color",color);
-       // apply color on all elements
-       $('.navbar-brand').css('border-color',color);
-      
-       $('.shape').css('background-color',color);
-       $('.img-border img').css('border-color',color);
-       $('.tags ul li span').css('border-color',color);
-       $('.about .cv-link').css('border-color',color);
-       $('.edu-year').css('color',color);
-       $('.contact-icon').css('border-color',color);
-       $('.floating-buttom a').css('background-color',color);
-       $('.navbar-brand').css('border-color',color);
-       $('.navbar-brand').css('border-color',color);
-       $('.navbar-brand').css('border-color',color);
-       
-      
+    $(".sidebar span").click(function () {
+
+
+        var bgColor = $(this).attr('class');
+        var str = bgColor.split(" ");
+
+        color = $("." + str[1]).css('background-color');
+
+        localStorage.setItem("color", color);
+        // apply color on all elements
+        $('.navbar-brand').css('border-color', color);
+
+        $('.shape').css('background-color', color);
+        $('.img-border img').css('border-color', color);
+        $('.tags ul li span').css('border-color', color);
+        $('.about .cv-link').css('border-color', color);
+        $('.edu-year').css('color', color);
+        $('.contact-icon').css('border-color', color);
+        $('.floating-buttom a').css('background-color', color);
+        $('.navbar-brand').css('border-color', color);
+        $('.navbar-brand').css('border-color', color);
+        $('.navbar-brand').css('border-color', color);
+
+
     });
     $('.navbar-dark .navbar-nav .nav-link').hover(function () {
-            // over
-            $(this).css('color',color);
-        }, function () {
-            // out
-            $(this).css('color','rgb(226, 225, 225)')
-        }
+        // over
+        $(this).css('color', color);
+    }, function () {
+        // out
+        $(this).css('color', 'rgb(226, 225, 225)')
+    }
     );
     $('ul li p').hover(function () {
-            // over
-            $(this).css('color',color);
-                
-        }, function () {
-            // out
-            $(this).css('color','rgb(226, 225, 225)')
-        }
+        // over
+        $(this).css('color', color);
+
+    }, function () {
+        // out
+        $(this).css('color', 'rgb(226, 225, 225)')
+    }
     );
     $('.social li a').hover(function () {
-            // over
-            $(this).css('color',color);
+        // over
+        $(this).css('color', color);
 
-        }, function () {
-            // out
-            $(this).css('color','rgb(226, 225, 225)')
-        }
+    }, function () {
+        // out
+        $(this).css('color', 'rgb(226, 225, 225)')
+    }
     );
     $('.about .cv-link').hover(function () {
-            // over
-            $(this).css('color',color);
+        // over
+        $(this).css('color', color);
 
-        }, function () {
-            // out
-            $(this).css('color','rgb(226, 225, 225)')
-        }
+    }, function () {
+        // out
+        $(this).css('color', 'rgb(226, 225, 225)')
+    }
     );
     $('.github a').hover(function () {
-            // over
-            $(this).css('color',color);
+        // over
+        $(this).css('color', color);
 
-        }, function () {
-            // out
-            $(this).css('color','rgb(226, 225, 225)')
-        }
+    }, function () {
+        // out
+        $(this).css('color', 'rgb(226, 225, 225)')
+    }
     );
-    
-   
 
-   
-       
-        
+
+
+
+
+
     $('#view').hide();
     $('#view-card').hide();
     $('.floating-buttom').hide();
-    
+
     $('.Certificate .cert-item .position-relative').click(function (e) {
         e.preventDefault();
         var image = $(this).find('img');
         var src = $(image).attr('src');
-        
-        $('#preview').attr('src',src);
+
+        $('#preview').attr('src', src);
         // $('#view').show();
         $('#view').show(0, function () {
-            
-            $('#view-card').show(0, function(){
+
+            $('#view-card').show(0, function () {
                 $('.block').css('transform', 'translateY(70px)');
                 $('body').css('overflow', 'hidden');
 
             });
-            
-           
+
+
         });
-       
-        
-        
+
+
+
 
     });
-    $('#times').click(function(){
+    $('#times').click(function () {
 
-        
+
         $('.block').css('transform', 'translateY(-70px)');
         $('#view').hide(0, function () {
             $('body').css('overflow', 'visible');
-           
+
         });
-      
-        
+
+
 
 
     });
 
     //sidebar
-    $('.setting').click(function () { 
-        
-        if( $(this).data('switch') == "close")
-        {
+    let sidebarWidth = $("#sidebar").innerWidth();
 
-           
-            $(this).animate({
-                left:'200px'
-            },300);
-            $('#sidebar').animate({
-                left:'0'
-            },300);
-            $(this).data('switch', 'open');
+   
+
+    $(".sidebar-container").css("left", `-${sidebarWidth}px`);
+    $(".setting").css("left", `-${sidebarWidth}px`);
+
+    $('.setting').click(function () {
+
+
+        let sidebarLeftProperty = $(".sidebar-container").css("left");
+
+        if (sidebarLeftProperty == "0px") {
+
+            // if sidebar menu opend then close 
+            $(".sidebar-container").animate({ left: `-${sidebarWidth}px` }, 500);
         }
-        else{
+        else 
+        {
+            // if close then open it 
+            $(".sidebar-container").animate({ left: `0px` }, 500);
 
-            if( $(this).data('switch') == 'open')
-            {
-                $(this).animate({
-                    left:'0px'
-                },300);
-                $('#sidebar').animate({
-                    left:'-199px'
-                },300);
-                $(this).data('switch', 'close');
-            }
-        }   
+        }
+
     });
-    // menu 
+    //  navbar  menu
     $(window).scroll(function () {
         if ($(window).scrollTop() > 80) {
 
             $('#floating').show(500);
             $("#nav").removeClass('bg-transparent'); //.css('background-color','#202026');
             document.getElementById("nav").style.backgroundColor = "#202026";
-            
+
 
         }
         else {
             $('#floating').hide(500);
             $("#nav").addClass('bg-transparent');
-            
+
 
         }
-        
+
     });
 
     //$("#imgdesc , .heading , .search-icon").hide();
     $('.imgdesc').hover(function () {
 
-      
+
         //  $(this).css('background-color', "#09c");
         // over
         $(this).animate({
             opacity: 0.6,
-            
-        },10,function () { 
-            
+
+        }, 10, function () {
+
             $(this).css('background-color', color);
             $(this).find(".heading , .search-icon ").css('opacity', 1);
-            $(this).find('.heading , .search-icon').css("transform","translateX(0px)");
-         });
-       
+            $(this).find('.heading , .search-icon').css("transform", "translateX(0px)");
+        });
+
 
     }, function () {
         // out
         $(this).animate({
             opacity: 0.6,
-            
-        },10,function () { 
-            
+
+        }, 10, function () {
+
             $(this).css('background-color', "transparent");
             $(this).find(".heading , .search-icon ").css('opacity', 0);
-            $(this).find('.heading').css("transform","translateX(100px)");
-            $(this).find('.search-icon').css("transform","translateX(-100px)");
-         });
-       
+            $(this).find('.heading').css("transform", "translateX(100px)");
+            $(this).find('.search-icon').css("transform", "translateX(-100px)");
+        });
+
 
     }
 
@@ -307,11 +306,12 @@ $('.github a').hover(function () {
         });
 
 
-        
+
 
 });
- 
-let _scrollReveal = function(){
+
+// Scroll Reveal 
+let _scrollReveal = function () {
     let SR = ScrollReveal({
         distance: '30px',
         duration: 1500,
@@ -321,7 +321,7 @@ let _scrollReveal = function(){
 
     ScrollReveal().reveal('.tags ul li', { origin: 'bottom', interval: 100, duration: 800, distance: '30px' });
 
-    SR.reveal('.cert-item ,#certificate h2 ', {origin: 'bottom', interval: 200})
+    SR.reveal('.cert-item ,#certificate h2 ', { origin: 'bottom', interval: 200 })
     SR.reveal(
         `.edu-details ,
            .break-line ,
