@@ -319,9 +319,9 @@ let _scrollReveal = function(){
     });
 
 
-    ScrollReveal().reveal('.tags ul li', { origin: 'bottom', interval: 100, duration: 800, distance: '30px' });
+    ScrollReveal().reveal('.tags ul li', { origin: 'top', interval: 100, duration: 800, distance: '30px' });
 
-    SR.reveal('.cert-item ,#certificate h2 ', {origin: 'bottom', interval: 200})
+    SR.reveal('.cert-item ,#certificate h2 ', {origin: 'top', interval: 200})
     SR.reveal(
         `.edu-details ,
            .break-line ,
@@ -331,7 +331,7 @@ let _scrollReveal = function(){
              edu-left h2 , exp-right h2 ,
              #contact h2 , #projects h2
          `,
-        { origin: 'bottom', interval: 200 });
+        { origin: 'top', interval: 200 });
 
     SR.reveal('.contact-content , .contact .row .col-md-9 p , .about-img', { origin: 'left', interval: 200 });
     SR.reveal('.contact-map , .contact .row .col-md-9 ul ',
