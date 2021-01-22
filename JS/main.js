@@ -310,3 +310,33 @@ $('.github a').hover(function () {
         
 
 });
+ 
+let _scrollReveal = function(){
+    let SR = ScrollReveal({
+        distance: '30px',
+        duration: 1500,
+        reset: true,
+    });
+
+
+    ScrollReveal().reveal('.tags ul li', { origin: 'bottom', interval: 100, duration: 800, distance: '30px' });
+
+    SR.reveal('.cert-item ,#certificate h2 ', {origin: 'bottom', interval: 200})
+    SR.reveal(
+        `.edu-details ,
+           .break-line ,
+            .about-me h2 , 
+            .about-me p ,
+             .about-content .col-md-12 ,
+             edu-left h2 , exp-right h2 ,
+             #contact h2 , #projects h2
+         `,
+        { origin: 'bottom', interval: 200 });
+
+    SR.reveal('.contact-content , .contact .row .col-md-9 p , .about-img', { origin: 'left', interval: 200 });
+    SR.reveal('.contact-map , .contact .row .col-md-9 ul ',
+        { origin: 'right', interval: 200 }
+
+    );
+}
+_scrollReveal();

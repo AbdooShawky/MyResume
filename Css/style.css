@@ -612,3 +612,6 @@ left: ;
         width: 90% !important;
     }
 }
+html.sr .load-hidden {
+    visibility: hidden;
+}
