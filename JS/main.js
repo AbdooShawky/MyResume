@@ -194,14 +194,17 @@ $(document).ready(function () {
 
     });
 
+
+
     //sidebar
+    // width of sidebar
     let sidebarWidth = $("#sidebar").innerWidth();
 
-
-
+    // close the sidebar
     $(".sidebar-container").css("left", `-${sidebarWidth}px`);
     $(".setting").css("left", `-${sidebarWidth}px`);
 
+    // when sidebar cliked
     $('.setting').click(function () {
 
 
