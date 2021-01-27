@@ -1,5 +1,5 @@
-$(function () {
 
+$(document).ready(function () {
 
     // get color from local storage 
     var color;
@@ -21,8 +21,10 @@ $(function () {
         $('.contact-icon').css('border-color', color);
         $('.floating-buttom a').css('background-color', color);
         $('.navbar-brand').css('border-color', color);
-        $('.navbar-brand').css('border-color', color);
-        $('.navbar-brand').css('border-color', color);
+        $('.list-page li p').css('border-color', color);
+        $('.active-page').css('background-color', color);
+
+
         $('.navbar-dark .navbar-nav .nav-link').hover(function () {
             // over
             $(this).css('color', color);
@@ -67,6 +69,18 @@ $(function () {
             $(this).css('color', 'rgb(226, 225, 225)')
         }
         );
+        $(".page").not('.active-page').hover(function () {
+            // over
+            $(this).css("background-color", color);
+            $(this).css("color", "#fff");
+
+        }, function () {
+            // out
+            $(this).css("background-color", "transparent");
+            $(this).css("color", "#fff");
+        }
+        );
+
 
     }
 
@@ -92,11 +106,12 @@ $(function () {
         $('.contact-icon').css('border-color', color);
         $('.floating-buttom a').css('background-color', color);
         $('.navbar-brand').css('border-color', color);
-        $('.navbar-brand').css('border-color', color);
-        $('.navbar-brand').css('border-color', color);
+        $('.list-page li p').css('border-color', color);
+        $('.active-page').css('background-color', color);
 
 
     });
+
     $('.navbar-dark .navbar-nav .nav-link').hover(function () {
         // over
         $(this).css('color', color);
@@ -105,15 +120,7 @@ $(function () {
         $(this).css('color', 'rgb(226, 225, 225)')
     }
     );
-    $('ul li p').hover(function () {
-        // over
-        $(this).css('color', color);
 
-    }, function () {
-        // out
-        $(this).css('color', 'rgb(226, 225, 225)')
-    }
-    );
     $('.social li a').hover(function () {
         // over
         $(this).css('color', color);
@@ -190,7 +197,7 @@ $(function () {
     //sidebar
     let sidebarWidth = $("#sidebar").innerWidth();
 
-   
+
 
     $(".sidebar-container").css("left", `-${sidebarWidth}px`);
     $(".setting").css("left", `-${sidebarWidth}px`);
@@ -205,8 +212,7 @@ $(function () {
             // if sidebar menu opend then close 
             $(".sidebar-container").animate({ left: `-${sidebarWidth}px` }, 500);
         }
-        else 
-        {
+        else {
             // if close then open it 
             $(".sidebar-container").animate({ left: `0px` }, 500);
 
@@ -268,7 +274,7 @@ $(function () {
     );
 
     // Select all links with hashes
-    $('a[href*="#"]')
+    $('nav a[href*="#"] , #floating a[href*="#"]')
         // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
@@ -289,41 +295,64 @@ $(function () {
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top - 50
-                    }, 1000, function () {
-                        // Callback after animation
-                        // Must change focus!
-                        var $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) { // Checking if the target was focused
-                            return false;
-                        } else {
-                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                            $target.focus(); // Set focus again
-                        };
-                    });
+                    }, 1000);
                 }
             }
         });
 
+    // handeling active page 
+    $(document).on("click", ".list-page li p", function (e) {
+
+
+        // apply to the clicked element background-color 
+        $(this).css("background-color", color).addClass("active-page");
+        // remove background-color from the other element     
+        $(this).parent().siblings().find('p').css("background-color", "transparent").removeClass("active-page");
+
+    });
+   
+    
+    // project section pages 
+    $(".two").hide();
+    var mixer = mixitup('#mixit');
+    var mixer = mixitup(containerEl);
+
+     
+    var mixer = mixitup('#mixit', {
+        selectors: {
+            target: '.blog-item'
+        },
+        animation: {
+            duration: 300
+        }
+    });
+    
+    
 
 
 
 });
 
+ 
+
 // Scroll Reveal 
 let _scrollReveal = function () {
+    // set common reveal properties on all alement 
     let SR = ScrollReveal({
         distance: '30px',
         duration: 1500,
-        reset: true,
+
+
     });
 
+
+    // apply animation on element by selecting classes or ids
 
     ScrollReveal().reveal('.tags ul li', { origin: 'bottom', interval: 100, duration: 800, distance: '30px' });
 
     SR.reveal('.cert-item ,#certificate h2 ', { origin: 'bottom', interval: 200 })
     SR.reveal(
-        `.edu-details ,
+        `  .edu-details,
            .break-line ,
             .about-me h2 , 
             .about-me p ,
@@ -334,9 +363,22 @@ let _scrollReveal = function () {
         { origin: 'bottom', interval: 200 });
 
     SR.reveal('.contact-content , .contact .row .col-md-9 p , .about-img', { origin: 'left', interval: 200 });
-    SR.reveal('.contact-map , .contact .row .col-md-9 ul ',
-        { origin: 'right', interval: 200 }
+    SR.reveal('.contact-map , .contact .row .col-md-9 ul ', { origin: 'right', interval: 200 });
 
-    );
+
+    // SR.reveal(".edu-details" , {origin: 'bottom', interval: 200 });
+
+
 }
 _scrollReveal();
+
+$(document).ready(function(){
+
+    // close loading screen
+     
+    $("#loading").fadeOut(1000 ,function () {
+        $("body").css("overflow","auto");
+    
+      });
+    
+  });
