@@ -453,15 +453,14 @@ ul li p:hover {
 .sidebar-container{
     left: 0px;
     top: 150px;
+    z-index: 9999999;
     
 }
 .setting{
    
     font-size: 24px;
     line-height: 20px;
-    
     color: black;
-    
     cursor: pointer;
 }
 .setting span{
@@ -487,8 +486,6 @@ ul li p:hover {
     font-weight: 900;
     font-size: 19px;
     color: #000;
- 
-
     border-bottom: 1px solid #8a8989;
     margin-bottom: 5px;
 }

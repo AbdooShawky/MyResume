@@ -348,6 +348,7 @@ let _scrollReveal = function () {
 
     });
 
+    
 
     // apply animation on element by selecting classes or ids
 
