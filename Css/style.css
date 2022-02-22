@@ -381,7 +381,7 @@ ul li p:hover {
 }
 /* End contact */
 /* Start Image view */
-
+/* parent */
 .img-view{
     background-color: rgba(0, 0, 0, 0.781);
     position: fixed;
@@ -391,16 +391,21 @@ ul li p:hover {
     bottom: 0;
     z-index: 99999;
     transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     
     
 }
+/* child */
 .img-view .block{
+    
     background-color: rgb(27, 27, 27);;
     border-radius: 15px;
     color:  rgb(226, 225, 225);
     box-shadow: -1rem 0 3rem #000;
-    transition: all 0.5s;
+    
 }
 #view-card{
     transition: all 0.5s;

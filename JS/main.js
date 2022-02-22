@@ -155,7 +155,7 @@ $(document).ready(function () {
 
 
     $('#view').hide();
-    $('#view-card').hide();
+    
     $('.floating-buttom').hide();
 
     $('.Certificate .cert-item .position-relative').click(function (e) {
